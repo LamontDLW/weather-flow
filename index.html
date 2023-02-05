@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WeatherFlow</title>
+</head>
+<body>
+
+    <div class="nav">
+            <div class="wf-title">
+                <h1>WeatherFlow</h1>
+            </div>
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search for your city">
+            </div>
+    </div>
+
+    <div class="weather-data">
+
+        <div class="full-card">
+            <h1 class="city-name">Toronto</h1>
+            <h2 class="city-temp">0&deg;</h2>
+
+            <div class="desc-info">
+                <!-- <img class="icon" src="" alt=""> -->
+                <p class="description"></p>
+            </div>
+        </div>
+
+        <div class="half-cards">
+            <div class="left-half-card">
+                <h2 class="high-temp">HIGH: 0&deg;</h2>
+            </div>
+    
+            <div class="right-half-card">
+                <h2 class="low-temp">LOW: 0&deg;</h2>
+            </div>
+        </div>
+
+        <div class="half-cards">
+            <div class="left-half-card">
+                <h1>Humidity</h1>
+                <h2 class="humidity">0%</h2>
+
+            </div>
+    
+            <div class="right-half-card">
+                <h1>Feels Like</h1>
+                <p class="feli-desc">Feels much colder than it is</p>
+                <h2 class="feels-like">0&deg;</h2>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <script>document.write(new Date().getFullYear())</script> LAMONT</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
