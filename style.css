@@ -79,9 +79,10 @@ body {
 
   .city-temp {
     font-size: 130px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -5px;
   }
 
   .desc-info {
@@ -96,8 +97,8 @@ body {
   }
 
   .description {
-    font-size: 30px;
-    padding: 10px 20px;
+    font-size: 25px;
+    padding: 10px 10px;
     font-weight: 300;
     text-transform: capitalize;
   }
@@ -109,8 +110,13 @@ body {
     width: calc(100vw - 50px);
   }
   
+  .half-cards h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
   .half-cards h2 {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 100;
   }
 
@@ -159,53 +165,37 @@ footer {
     font-weight: lighter;
 }
 
+/* MOBILE VIEW  */
+@media screen and (max-width: 800px) {
 
-/*
-  .card {
-    background: #000000d0;
-    color: white;
-    padding: 2em;
-    border-radius: 30px;
-    width: 100%;
-    max-width: 420px;
-    margin: 1em;
-  }
+    .wf-title h1 {
+        font-size: 20px;
+        padding-left: 15px;
+      }
+    
+    input.search-bar {
+        font-size: 100%;
+        width: calc(100% - 50px);
+    }
 
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.search::placeholder {
-    font-size: 120%;
-}
+    .description {
+        font-size: 20px;
+        text-align: center;
+    }
 
-button {
-    background-color: #7c7c7c2b;
-    color: white;
-    margin: 0.5em;
-    border-radius: 50%;
-    border: none;
-    height: 46px;
-    width: 46px;
-    outline: none;
-    transition: 0.2s ease-in-out;
-}
+    .half-cards {
+        flex-direction: column;
+    }
 
-button:hover {
-    background-color: #7c7c7c6b;
-    cursor: pointer;
-}
+    .half-cards h2 {
+        font-size: 35px;
+    }
 
-input.search-bar {
-    border: none;
-    outline: none;
-    padding: 0.5em 1em;
-    border-radius: 24px;
-    background-color: #7c7c7c2b;
-    color: white;
-    font-family: inherit;
-    font-size: 120%;
-    width: calc(100% - 100px);
+    .left-half-card {
+        width: calc(100% - 40px);
+    }
+
+    .right-half-card {
+        width: calc(100% - 40px);
+    }
 }
-*/
