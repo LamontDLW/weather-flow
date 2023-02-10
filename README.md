@@ -11,7 +11,6 @@ New features and updates to this weather app are added constantly.
 - CSS
 - JAVASCRIPT
 
-### Developed and designed by:
-Lamont Webb
+### Designed by Lamont in Toronto
 
 [lamontdlw.com](lamontdlw.com)
