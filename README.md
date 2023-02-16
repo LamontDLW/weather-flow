@@ -4,7 +4,7 @@ This is a relatively simple project that displays the power of JavaScript and ut
 
 New features and updates to this weather app are added constantly.
 
-![Screenshot](https://lamontdlw.com/resources/weatherflow.png)
+![Screenshot](http://lamontdlw.com/resources/weatherflow.png)
 
 ### Built With:
 - HTML
