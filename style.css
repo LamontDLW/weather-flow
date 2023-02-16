@@ -1,201 +1,110 @@
-body {
-    background-color: #2062C5;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+  
   * {
     margin: 0;
     padding: 0;
     cursor: default;
   }
 
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-
-    margin: 0.5rem 1.5rem;
-    margin-top: 20px;
-    color: #FFF;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+  body {
+    background: rgb(19,96,211);
+    background: linear-gradient(180deg, rgba(19,96,211,1) 21%, rgba(141,184,249,1) 100%);
+    font-family: 'Roboto Mono', monospace;
   }
 
-  .wf-title h1 {
-    font-size: 30px;
+  .nav { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 25px 30px;
+  }
+
+  .wf-title h1 { 
+    color: #FFF;
+    letter-spacing: 5px;
   }
 
   input.search-bar {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: rgb(255, 255, 255);
+
+    font-family: monospace;
     border: none;
-    outline: none;
+    border-radius: 2rem;
 
-    padding: 0.5em 1em;
-    border-radius: 12px;
-
-    background-color:  rgba(255, 255, 255, 0.10);
-    color: white;
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 120%;
-    width: calc(100% - 50px);
-  }
-
-  input.search-bar:hover {
-    cursor: auto;
+    padding: 10px 15px;
+    width: 200px;
   }
 
   input.search-bar::placeholder {
-    color: white;
-    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.4); 
   }
 
-  .weather-data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .full-card {
-    background-color: rgba(255, 255, 255, 0.10);
+  .weather {
+    background-color: rgba(255, 255, 255, 0.1);
     color: #FFF;
-    min-width: calc(100vw - 150px);
-    width: calc(100vw - 150px);
 
-    border-radius: 1rem;
-    margin: 10px 10px;
-    padding: 40px 40px;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .city-name {
-    font-size: 50px;
-    padding: 10px 20px;
-  }
-
-  .city-temp {
-    font-size: 130px;
-    padding: 10px 10px;
-    font-weight: 300;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: -5px;
-  }
-
-  .desc-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .icon {
-    width: 80px;
-    height: auto;
-  }
-
-  .description {
-    font-size: 25px;
-    padding: 10px 10px;
-    font-weight: 300;
-    text-transform: capitalize;
-  }
-
-  .half-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: calc(100vw - 50px);
-  }
-  
-  .half-cards h1 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-
-  .half-cards h2 {
-    font-size: 60px;
-    font-weight: 100;
-  }
-
-  .left-half-card {
-    background-color: rgba(255, 255, 255, 0.10);
-    color: #FFF;
-    text-align: center;
-
-    border-radius: 1rem;
-    margin: 10px 10px;
-    padding: 50px 10px;
-
-    width: calc(50% - 40px);
-  }
-
-  .right-half-card {
-    background-color: rgba(255, 255, 255, 0.10);
-    color: #FFF;
-    text-align: center;
-
-    border-radius: 1rem;
-    margin: 10px 10px;
-    padding: 50px 10px;
-
-    width: calc(50% - 40px);
-  }
-
-.humidity {
-    padding: 10px 5px;
-}
-
-.feli-desc {
-    padding: 5px 5px;
-    font-size: 25px;
-}
-
-.feels-like {
-    padding: 10px 5px;
-}
-
-/* FOOTER */
-footer {
-    background-color: inherit;
-    color: white;
     padding: 30px;
-    font-weight: lighter;
-}
+    margin: 10px 30px;
+    border-radius: 2rem;
 
-/* MOBILE VIEW  */
+    text-align: center;
+  }
+
+  .weather h1 { font-size: 30px; font-weight: 700; letter-spacing: 10px;} 
+  .weather h2 { font-size: 120px; font-weight: 300; letter-spacing: -6px;}
+  .weather p { font-size: 30px; font-weight: 100; letter-spacing: 10px; }
+  .description { padding: 10px 0;}
+  
+  .high-low {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+
+  .data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    padding: 10px 30px;
+
+    text-align: center;
+    color: #FFF;
+  }
+
+  .feels-like, .humidity, .pressure, .windspeed  {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    padding: 5vh 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .feels-like:hover, .humidity:hover , .pressure:hover , .windspeed:hover { 
+    transform: scale(1.02); 
+    cursor: pointer;
+  }
+
+  .data h1 { font-size: 35px; font-weight: 500; }
+  .data h2 { font-size: 45px; font-weight: 800; }
+
+  footer {
+    color: #FFF;
+    padding: 30px;
+    padding-top: 50px;
+  }
+
+ /* MOBILE VIEW  */
 @media screen and (max-width: 800px) {
-
-    .wf-title h1 {
-        font-size: 20px;
-        padding-left: 15px;
-      }
-    
-    input.search-bar {
-        font-size: 100%;
-        width: calc(100% - 50px);
-    }
-
-    .description {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .half-cards {
-        flex-direction: column;
-    }
-
-    .half-cards h2 {
-        font-size: 35px;
-    }
-
-    .left-half-card {
-        width: calc(100% - 40px);
-    }
-
-    .right-half-card {
-        width: calc(100% - 40px);
-    }
+  .nav { 
+    padding: 25px 10px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .wf-title h1 { font-size: 20px;  padding: 10px }
+  .data { grid-template-columns: 1fr; }
 }

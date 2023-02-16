@@ -18,18 +18,36 @@ let weather = {
         console.log(name, icon, description, temp, pressure, temp_max, temp_min, humidity, speed)
 
         document.querySelector(".city-name").textContent = name;
-        document.querySelector(".city-temp").textContent = Math.floor(temp) + "°";
-        document.querySelector(".high-temp").textContent = "HIGH: " + Math.floor(temp_max) + "°";
-        document.querySelector(".low-temp").textContent = "LOW: " + Math.floor(temp_min) + "°";
-        document.querySelector(".description").textContent = description + " Right Now";
-        document.querySelector(".humidity").textContent = Math.floor(humidity) + "%";
-        document.querySelector(".feels-like").textContent = Math.floor(feels_like) + "°";
+        document.querySelector(".city-temp").textContent = Math.floor(temp);
+        document.querySelector(".high-temp").textContent = Math.floor(temp_max)
+        document.querySelector(".low-temp").textContent = Math.floor(temp_min)
+        document.querySelector(".description").textContent = description
+        document.querySelector(".humidity-per").textContent = Math.floor(humidity)
+        document.querySelector(".feel-like").textContent = Math.floor(feels_like)
+        document.querySelector(".pressure-per").textContent = Math.floor(pressure)
+        document.querySelector(".wind-per").textContent = Math.floor(speed)
 
         function compareFeelsLikeTemp() {
-            if ( Math.floor(feels_like) > Math.floor(temp) ) { document.querySelector(".feli-desc").textContent = "Feels much warmer than it actually is";
-            } else { document.querySelector(".feli-desc").textContent = "Feels much colder than it is outside"; }
+            if ( Math.floor(feels_like) > Math.floor(temp) ) { document.querySelector(".feli-desc").textContent = "Feels warmer than it is";
+            } else { document.querySelector(".feli-desc").textContent = "Feels cooler than it is"; }
         };
         compareFeelsLikeTemp();
+
+        function humidityChart() {
+            // 0 - 30 (low humidity)
+            // 30 - 60 (fair humidity)
+            // 60-90 (high humidity)
+            if (humidity >= 0 && humidity <= 30) {
+                document.querySelector(".hum-desc").textContent = "Low humidity today";
+            } else if (humidity >= 30 && humidity <= 60) {
+                document.querySelector(".hum-desc").textContent = "It's fair today";
+            } else if (humidity >= 60 && humidity <= 100) {
+                document.querySelector(".hum-desc").textContent = "Very high today";
+            } else {
+                console.log("..")
+            }
+        };
+        humidityChart();
         
     },
     search: function () {
@@ -42,6 +60,7 @@ document
 .addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
         weather.search()
+        document.querySelector('.search-bar').value=null;
     }
 });
 

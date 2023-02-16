@@ -14,49 +14,57 @@
                 <h1>WeatherFlow</h1>
             </div>
             <div class="search">
-                <input type="text" class="search-bar" placeholder="Search for your city">
+                <input type="text" class="search-bar" placeholder="Search for your city..">
             </div>
     </div>
 
-    <div class="weather-data">
+    <div class="weather">
+        <div class="hero-data">
+            <h1 class="city-name">Miami</h1>
+            <h2>
+                <span class="city-temp">0</span>&deg;
+            </h2>
+            <p class="description">Sunny</p>
 
-        <div class="full-card">
-            <h1 class="city-name">Toronto</h1>
-            <h2 class="city-temp">0&deg;</h2>
-
-            <div class="desc-info">
-                <!-- <img class="icon" src="" alt=""> -->
-                <p class="description"></p>
+            <div class="high-low">
+                <p>
+                    <strong>HIGH:</strong> 
+                    <span class="high-temp">0</span>&deg;
+                </p>
+                <p>
+                    <strong>LOW:</strong>
+                    <span class="low-temp">0</span>&deg;
+                </p>
             </div>
         </div>
+    </div>
 
-        <div class="half-cards">
-            <div class="left-half-card">
-                <h2 class="high-temp">HIGH: 0&deg;</h2>
-            </div>
-    
-            <div class="right-half-card">
-                <h2 class="low-temp">LOW: 0&deg;</h2>
-            </div>
+    <div class="data">
+        <div class="feels-like">
+            <h1>Feels Like</h1>
+            <p class="feli-desc"></p>
+            <h2><span class="feel-like">0</span>&deg;</h2>
         </div>
-
-        <div class="half-cards">
-            <div class="left-half-card">
-                <h1>Humidity</h1>
-                <h2 class="humidity">0%</h2>
-
-            </div>
     
-            <div class="right-half-card">
-                <h1>Feels Like</h1>
-                <p class="feli-desc">Feels much colder than it is</p>
-                <h2 class="feels-like">0&deg;</h2>
-            </div>
+        <div class="humidity">
+            <h1>Humidity</h1>
+            <p class="hum-desc"></p>
+            <h2><span class="humidity-per">0</span>%</h2>
+        </div>
+    
+        <div class="pressure">
+            <h1>Pressure</h1>
+            <h2><span class="pressure-per">0</span> inHg</h2>
+        </div>
+    
+        <div class="windspeed">
+            <h1>Wind Speed</h1>
+            <h2><span class="wind-per">0</span>mph</h2>
         </div>
     </div>
 
     <footer>
-        <p>© <script>document.write(new Date().getFullYear())</script> LAMONT</p>
+        <p>© <script>document.write(new Date().getFullYear())</script> | LAMONT</p>
     </footer>
 </body>
 <script src="script.js"></script>
